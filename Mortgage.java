@@ -17,9 +17,10 @@ public class Mortgage {
     this.InterestRate = InterestRate/100;
     this.InterestRate = this.InterestRate/12;
     this.Term = Term;
+    calculateMortgage();
   }
   
-  public void calculateMortgage() {
+  private void calculateMortgage() {
   	MonthlyPayments = Term * 12;
     this.Term = 1 + InterestRate;
     this.Term = Math.pow(this.Term, MonthlyPayments);
